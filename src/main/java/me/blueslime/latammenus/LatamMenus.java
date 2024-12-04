@@ -22,5 +22,7 @@ public final class LatamMenus extends BukkitMeteorPlugin {
         ).finish();
 
         new PluginCommand().register();
+
+        registerOpenMenuCommand();
     }
 }
