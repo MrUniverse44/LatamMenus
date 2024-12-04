@@ -11,7 +11,7 @@ public final class LatamMenus extends BukkitMeteorPlugin {
 
     @Override
     public void onEnable() {
-        initialize(this, false, true);
+        initialize(this, true, true);
         new Metrics(this, 24072);
     }
 
