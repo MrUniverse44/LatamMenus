@@ -1,6 +1,7 @@
 package me.blueslime.latammenus;
 
 import me.blueslime.bukkitmeteor.BukkitMeteorPlugin;
+import me.blueslime.latammenus.commands.PluginCommand;
 import me.blueslime.latammenus.services.ListenerService;
 import me.blueslime.latammenus.services.MenuCommandService;
 import me.blueslime.latammenus.utils.Metrics;
@@ -19,5 +20,7 @@ public final class LatamMenus extends BukkitMeteorPlugin {
             MenuCommandService.class,
             ListenerService.class
         ).finish();
+
+        new PluginCommand().register();
     }
 }
