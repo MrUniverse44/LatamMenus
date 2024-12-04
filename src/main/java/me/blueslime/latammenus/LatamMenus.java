@@ -1,17 +1,23 @@
 package me.blueslime.latammenus;
 
-import org.bukkit.plugin.java.JavaPlugin;
+import me.blueslime.bukkitmeteor.BukkitMeteorPlugin;
+import me.blueslime.latammenus.services.ListenerService;
+import me.blueslime.latammenus.services.MenuCommandService;
+import me.blueslime.latammenus.utils.Metrics;
 
-public final class LatamMenus extends JavaPlugin {
+public final class LatamMenus extends BukkitMeteorPlugin {
 
     @Override
     public void onEnable() {
-        // Plugin startup logic
-
+        initialize(this, false, true);
+        new Metrics(this, 24072);
     }
 
     @Override
-    public void onDisable() {
-        // Plugin shutdown logic
+    public void registerModules() {
+        registerModule(
+            MenuCommandService.class,
+            ListenerService.class
+        ).finish();
     }
 }

@@ -1,4 +1,4 @@
 name: LatamMenus
 version: '1.0.0'
 main: me.blueslime.latammenus.LatamMenus
-api-version: '1.20'
+api-version: '1.13'
